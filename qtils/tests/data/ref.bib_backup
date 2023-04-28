@@ -1,0 +1,24 @@
+@article{Wallis_2014,
+	doi = {10.1016/j.jhydrol.2014.04.061},
+	year = 2014,
+	month = {jul},
+	publisher = {Elsevier {BV}},
+	volume = {515},
+	pages = {191--204},
+	author = {Ilka Wallis and Catherine Moore and Vincent Post and Leif Wolf and Evelien Martens and Henning Prommer},
+	title = {Using predictive uncertainty analysis to optimise tracer test design and data acquisition},
+	journal = {Journal of Hydrology}
+}
+
+@article{Fienen_2017,
+ 	doi = {10.1111/gwat.12536},
+ 	year = 2017,
+ 	month = {jun},
+ 	publisher = {Wiley},
+ 	volume = {56},
+ 	number = {1},
+ 	pages = {18--31},
+ 	author = {Michael N. Fienen and Kenneth R. Bradbury and Maribeth Kniffin and Paul M. Barlow},
+ 	title = {Depletion Mapping and Constrained Optimization to Support Managing Groundwater Extraction},
+ 	journal = {Groundwater}
+ }
