@@ -1,8 +1,8 @@
 [
   {
-    "name": "cloud-ht2c",
+    "name": "quarto-utils",
     "organization": "U.S. Geological Survey",
-    "description": "Amazon Web Services Service Product",
+    "description": "utilities for references in quarto",
     "version": "0.1",
     "status": "Alpha",
 
@@ -11,23 +11,23 @@
       "licenses": [
         {
           "name": "Public Domain, CC0-1.0",
-          "URL": "https://github.com/DOI-USGS/cloud-ht2c/raw/main/LICENSE.md"
+          "URL": "https://github.com/mnfienen/quarto-utils/raw/main/LICENSE.md"
         }
       ]
     },
 
-    "homepageURL": "https://github.com/DOI-USGS/cloud-ht2c",
-    "downloadURL": "https://github.com/DOI-USGS/cloud-ht2c/archive/main/cloud-ht2c.zip",
-    "disclaimerURL": "https://github.com/DOI-USGS/cloud-ht2c/raw/main/DISCLAIMER.md",
-    "repositoryURL": "https://github.com/DOI-USGS/cloud-ht2c.git",
+    "homepageURL": "https://github.com/mnfienen/quarto-utils",
+    "downloadURL": "https://github.com/mnfienen/quarto-utils/archive/main/quarto-utils.zip",
+    "disclaimerURL": "https://github.com/mnfienen/quarto-utils/raw/main/DISCLAIMER.md",
+    "repositoryURL": "https://github.com/mnfienen/quarto-utils.git",
     "vcs": "git",
 
     "laborHours": 0,
 
     "tags": [
-      "high throughput computing",
-      "AWS cloudformation",
-      "HTCondor"
+      "quarto",
+      "python",
+      "bibtex"
 
     ],
 
@@ -41,7 +41,7 @@
     },
 
     "date": {
-      "metadataLastUpdated": "2023-03-03"
+      "metadataLastUpdated": "2023-04-28"
     }
   }
 ]
