@@ -21,3 +21,22 @@ def test_update_bib():
     # run the update - one should fail
     update_bibfile(DATA_DIR / 'ref.bib', dois)
     
+
+def test_doi_parser():
+    from qtils.utils import _strip_doi
+    qfile = DATA_DIR / 'example.dois.qmd'
+    dat = qfile.read_text().split('_doi:')
+    dois = [_strip_doi(i) for i in dat[1:]]
+    assert dois == ['10.1145/2492517.2500290',
+                    'hTTps://doi.org/10.1038/nclimate2425',
+                    '10.1080/14650040590946584']
+    
+def test_dois_to_bibtex_qmd():
+    from qtils.utils import update_references
+    # make a copy to test with 
+    shutil.copy2(DATA_DIR / 'ref.bib_backup', 
+                 DATA_DIR / 'references.bib')
+    update_references(DATA_DIR / 'example.dois.qmd',
+                      DATA_DIR / 'references.bib',
+                      False,
+                      None)
