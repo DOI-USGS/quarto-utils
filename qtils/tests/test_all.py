@@ -16,7 +16,7 @@ def test_update_bib():
     shutil.copy2(DATA_DIR / 'ref.bib_backup', 
                  DATA_DIR / 'ref.bib')
     # set up dois to update with
-    dois = ['junkus','10.1111/gwat.12536','10.1111/gwat.13083', '10.3133/tm7C9']
+    dois = ['junkus fail','10.1111/gwat.12536','10.1111/gwat.13083', '10.3133/tm7C9']
     
     # run the update - one should fail
     update_bibfile(DATA_DIR / 'ref.bib', dois)
@@ -36,7 +36,25 @@ def test_dois_to_bibtex_qmd():
     # make a copy to test with 
     shutil.copy2(DATA_DIR / 'ref.bib_backup', 
                  DATA_DIR / 'references.bib')
+    # try with automatic update of filename
     update_references(DATA_DIR / 'example.dois.qmd',
                       DATA_DIR / 'references.bib',
                       False,
                       None)
+    # now try inplace
+    shutil.copy2(DATA_DIR / 'ref.bib_backup', 
+                 DATA_DIR / 'references.bib')
+    shutil.copy2(DATA_DIR / 'example.dois.qmd', 
+                 DATA_DIR / 'inplace.qmd')
+    update_references(DATA_DIR / 'inplace.qmd',
+                      DATA_DIR / 'references.bib',
+                      True,
+                      None)
+    # and, finally try writing to custom filename
+    update_references(DATA_DIR / 'inplace.qmd',
+                      DATA_DIR / 'references.bib',
+                      False,
+                      DATA_DIR / 'newfile.qmd')
+    
+    
+    

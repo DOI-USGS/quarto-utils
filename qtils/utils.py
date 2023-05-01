@@ -16,7 +16,7 @@ def doi2bib(doi='10.1016/j.jhydrol.2014.04.061', skip_url=True):
     Returns:
         list: list of lines for bibTex entry, skipping url if skip_url is True
     """
-    url = BASE_URL + doi.lower().replace('https://doi.org','')
+    url = BASE_URL + doi.lower().replace('https://doi.org','').replace(' ','')
     req = urllib.request.Request(url)
     req.add_header('Accept', 'application/x-bibtex')
     try:
@@ -37,6 +37,9 @@ def update_bibfile(bib_file, dois):
     Args:
         bib_file (str): Name of bib file to update
         dois (list): List of dois (strings) to add to bib_file
+    Returns:
+        bib_dict (dict): Dictionary with keys of value dois and values of entry
+                         records in the resulting bib file
     """
     # read in the existing bib file for updating
     bib_file = pl.Path(bib_file)
@@ -50,12 +53,13 @@ def update_bibfile(bib_file, dois):
         for cdoi, cbib in zip(dois,bibs):
             if cbib == 'FAIL':
                 # doi2bib failed - just warn and move on
-                print (f'Could not obtain bibTex entry for doi={cdoi}')
+                print (f'Could not obtain bibTex entry for doi="{cdoi}"')
             elif cbib[0].strip() in inbib:
                 # entry already in the bib file
-                print(f'doi: {cdoi} already in {bib_file}. Skipping')
+                print(f'doi: "{cdoi}" already in {bib_file}. Skipping')
             else:
                 # write the new entry into the bib file
+                print(f'Adding doi: "{cdoi}" to bib file')
                 ofp.write('\n' + '\n '.join(cbib))
     # make a dictionary with the dois and the key for references
     bib_dict = {}
@@ -111,8 +115,12 @@ def update_references(qmd_file, bibfile,
         new_qmd_file (_type_, optional): New file to which updated qmd file is written. 
             Ignored if inplace==False. Defaults to None.
     """
+    # make sure the paths are legit pathlib objects
+    qmd_file = pl.Path(qmd_file)
+    if new_qmd_file is not None:
+        new_qmd_file = pl.Path(new_qmd_file)
     # first find the dois
-    qmd_text = pl.Path(qmd_file).read_text()
+    qmd_text = qmd_file.read_text()
     if '\_doi' in qmd_text:
         doiflag = '\_doi'
     else:
@@ -120,14 +128,13 @@ def update_references(qmd_file, bibfile,
     dois = qmd_text.split('_doi:')
     if len(dois)>1:
         dois = [_strip_doi(i) for i in dois[1:]]
-        
+        # next update the references
+        bib_dict = update_bibfile(bibfile, dois)
+        for ck,cv in bib_dict.items():
+            qmd_text = qmd_text.replace(f'{doiflag}:{ck}',f'@{cv}')        
     else:
         print('no dois found. No updates to make.')
-    
-    # next update the references
-    bib_dict = update_bibfile(bibfile, dois)
-    for ck,cv in bib_dict.items():
-        qmd_text = qmd_text.replace(f'{doiflag}:{ck}',f'@{cv}')
+
     # finally write out the updated file
     _write_updated_qmd(qmd_file, qmd_text, 
                        inplace=inplace, new_qmd_file=new_qmd_file)
