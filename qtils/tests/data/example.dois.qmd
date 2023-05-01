@@ -21,22 +21,28 @@ editor:
   markdown: 
     wrap: sentence
 ---
+
 # Abstract
-This is where it is all summed up nicely. 
+
+This is where it is all summed up nicely.
 
 # On Bromances in Cold War RomComs
 
-This person [_doi:10.1145/2492517.2500290] pretty much covers it, no? There are all kinds of relationships and it makes one wonder about how water fits in and the relation between James Bond and the Cold War?[_doi:hTTps://doi.org/10.1038/nclimate2425; _doi:10.1080/14650040590946584]
+This person \[\_doi:10.1145/2492517.2500290\] pretty much covers it, no?
+There are all kinds of relationships and it makes one wonder about how water fits in and the relation between James Bond and the Cold War?\[
+\_doi:hTTps://doi.org/10.1038/nclimate2425; \_doi:10.1080/14650040590946584\]
 
 # How does this relate to Halloween Candy?
 
 Welp, of course there is not a relation here, but there is cool data from FiveThirtyEight though in (@fig-candy).
-Which is pretty awesome since Reeses Pieces were in the movie _E.T._
-E.T., naturally, was not a RomCom (or was it???) but most definitely was squarely in the Cold War.
+Which is pretty awesome since Reeses Pieces were in the movie *E.T.* E.T., naturally, was not a RomCom (or was it???) but most definitely was squarely in the Cold War.
 So, like, James Bond likes Vodka (how Soviet!) and fake aliens love the Reeses Pieces because M&Ms weren't interested in the product placement.
-So for sure the bromance between Elliot and the Alien (wait, does E.T. have a gender? Is it even necessary? Can bromances happen across genders? We need more studies.) ties in with all the missile and bomb development that brought Reagan into office. 
-There is so much more to say, especially if we really want to push the Refs section (@sec-References)  off into the next page. 
-But our work here is not done. As clearly described in @eq-first, your mother was, indeed, a hampster _and_ your father reeked of elderberries. It's tragic to note, but Mr. Creosote didn't have any friends, once he exploded, as noted in @eq-black-scholes in a discussion about financial collapses post-Cold War.
+So for sure the bromance between Elliot and the Alien (wait, does E.T. have a gender? Is it even necessary? Can bromances happen across genders? We need more studies.) ties in with all the missile and bomb development that brought Reagan into office.
+There is so much more to say, especially if we really want to push the Refs section (@sec-References) off into the next page.
+But our work here is not done.
+By the way, this is meaningless but referencing anyway [@Fienen_2017].
+As clearly described in @eq-first, your mother was, indeed, a hampster *and* your father reeked of elderberries.
+It's tragic to note, but Mr. Creosote didn't have any friends, once he exploded, as noted in @eq-black-scholes in a discussion about financial collapses post-Cold War.
 
 $$ \iiint f(r,\,\theta,\,z)\;r\;dr\;d\theta\;dz $$ {#eq-first}
 
@@ -48,19 +54,22 @@ $$
 $$ {#eq-black-scholes}
 
 What about Mikhail Gorbachev?
-It seems certain, from the fact that he was human, that some candy was attractive to him, maybe especially dipped in vodka. 
+It seems certain, from the fact that he was human, that some candy was attractive to him, maybe especially dipped in vodka.
 But, does that suggest he was also an MI-6 agent?
 And was his biggest bromance with Reagan, Bond, or E.T.?
 Posthumus verification is dificult, to say the least, but if one considers Emmet "Doc" Brown, Marty McFly, and the intelligent development of flux capacitors, it might be possible to move back to the 80's, listen to Nena, chomp on some Reeses Pieces, and discuss this all with Elliot and E.T.
-The close corresponance of principal components for the names Emmet and Elliot certainly suggests this closeness between E.T. and Gorbachev to be real.
+The close corresponance of principal components for the names Emmet and Elliot certainly suggests this closeness between E.T.
+and Gorbachev to be real.
 
 Most importantly, we have arrived at another page so our work of analysis is complete.
 
 # Conclusions
-The universe is indeed expanding, as we have shown, and everyone hugs it out in the RomComs. 
+
+The universe is indeed expanding, as we have shown, and everyone hugs it out in the RomComs.
 The Cold War and its mysterious candies made sure of that.
 
 # Acknowledgements
+
 I want to thank the academy, my mom, and most of all my puppy.
 
 ![Candy plot!](../data/candy.png){#fig-candy}

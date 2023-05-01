@@ -78,7 +78,10 @@ def _strip_doi(doistring):
         locbrak = doistring.index(']')
     if ' ' in doistring:
         locspace = doistring.index(' ')
-    doilimit = min((locbrak,locsep, locspace))    
+    if '\\' in doistring:
+        locbackslash = doistring.index('\\')
+        
+    doilimit = min((locbrak, locsep, locspace, locbackslash))    
     return(doistring[:doilimit])
     
 def _write_updated_qmd(qmd_file, qmd_text, inplace=False, new_qmd_file=None):
@@ -110,6 +113,10 @@ def update_references(qmd_file, bibfile,
     """
     # first find the dois
     qmd_text = pl.Path(qmd_file).read_text()
+    if '\_doi' in qmd_text:
+        doiflag = '\_doi'
+    else:
+        doiflag = '_doi'
     dois = qmd_text.split('_doi:')
     if len(dois)>1:
         dois = [_strip_doi(i) for i in dois[1:]]
@@ -120,7 +127,7 @@ def update_references(qmd_file, bibfile,
     # next update the references
     bib_dict = update_bibfile(bibfile, dois)
     for ck,cv in bib_dict.items():
-        qmd_text = qmd_text.replace(f'_doi:{ck}',f'@{cv}')
+        qmd_text = qmd_text.replace(f'{doiflag}:{ck}',f'@{cv}')
     # finally write out the updated file
     _write_updated_qmd(qmd_file, qmd_text, 
                        inplace=inplace, new_qmd_file=new_qmd_file)
