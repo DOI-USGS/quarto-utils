@@ -75,7 +75,7 @@ def _strip_doi(doistring):
         doistring (_type_): string containing a doi
     """
     doistring = doistring.strip().replace('\t',' ')
-    locbrak = locsep = locspace = 1e6
+    locbrak = locsep = locspace = locbackslash = 1e6
     if ';' in doistring:
         locsep = doistring.index(';')
     if ']' in doistring:
