@@ -29,7 +29,8 @@ def test_doi_parser():
     dois = [_strip_doi(i) for i in dat[1:]]
     assert dois == ['10.1145/2492517.2500290',
                     'hTTps://doi.org/10.1038/nclimate2425',
-                    '10.1080/14650040590946584']
+                    '10.1080/14650040590946584',
+                    '10.1029/WR020i004p00415']
     
 def test_dois_to_bibtex_qmd():
     from qtils.utils import update_references

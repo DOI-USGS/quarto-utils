@@ -75,17 +75,19 @@ def _strip_doi(doistring):
         doistring (_type_): string containing a doi
     """
     doistring = doistring.strip().replace('\t',' ')
-    locbrak = locsep = locspace = locbackslash = 1e6
+    locbrak = locsep = locspace = locbackslash = loccomma = 1e6
     if ';' in doistring:
         locsep = doistring.index(';')
     if ']' in doistring:
         locbrak = doistring.index(']')
     if ' ' in doistring:
         locspace = doistring.index(' ')
+    if ',' in doistring:
+        loccomma = doistring.index(',')
     if '\\' in doistring:
         locbackslash = doistring.index('\\')
         
-    doilimit = min((locbrak, locsep, locspace, locbackslash))    
+    doilimit = min((locbrak, locsep, locspace, locbackslash, loccomma))    
     return(doistring[:doilimit])
     
 def _write_updated_qmd(qmd_file, qmd_text, inplace=False, new_qmd_file=None):
