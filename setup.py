@@ -8,10 +8,10 @@ setuptools.setup(
     version="0.1.0",
     author="Michael N. Fienen, Richard A. Erickson",
     author_email="mnfienen@usgs.gov, rerickson@usgs.gov",
-    description="Helper tools for Qurto",
+    description="Helper tools for Quarto",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://code.usgs.gov/umesc/metaIPM",
+    url="https://github.com/mnfienen/quarto-utils",
     packages=setuptools.find_packages(),
     install_requires=['requests','pytest','flake8','codecov','coverage'],
     classifiers=[
