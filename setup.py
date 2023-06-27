@@ -11,7 +11,7 @@ setuptools.setup(
     description="Helper tools for Qurto",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://code.usgs.gov/umesc/metaIPM",
+    url="https://github.com/mnfienen/quarto-utils",
     packages=setuptools.find_packages(),
     install_requires=['requests','pytest','flake8','codecov','coverage'],
     classifiers=[
