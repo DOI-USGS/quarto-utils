@@ -113,9 +113,9 @@ def update_references(qmd_file, bibfile,
         inplace (bool, optional): Option to replace existing file or to save as a copy.
             If False, and if new_qmd_file is provided, the new file is written to new_qmd_file.
             If False and no new_wmd_file value is provided, the new file is written to a file
-            that simply updates qmd_file to include "updated" in the filename. Defaults to False.
+            that simply updates qmd_file to include "updated" in the filename. Defaults to True.
         new_qmd_file (_type_, optional): New file to which updated qmd file is written. 
-            Ignored if inplace==False. Defaults to None.
+            Ignored if inplace==True. Defaults to None.
     """
     # make sure the paths are legit pathlib objects
     qmd_file = pl.Path(qmd_file)

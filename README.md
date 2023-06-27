@@ -9,6 +9,6 @@ Finally, this package allows authors to compose Quarto MarkDown documents (`.qmd
 The jupyter notebook in `/examples/examples.ipynb` includes example applications of all the functions in the package.
 
 # Getting Started
-This code will work with python 3.7 and greater with no special packages needed (save for `jupyter notebook` to run the notebook example)
+This code will work with python 3.7 and greater with `requests` and no other special packages needed (save for `jupyter notebook` to run the notebook example and `pytest` to evaluate the tests)
 
 

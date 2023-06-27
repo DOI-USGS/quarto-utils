@@ -8,7 +8,7 @@ setuptools.setup(
     version="0.1.0",
     author="Michael N. Fienen, Richard A. Erickson",
     author_email="mnfienen@usgs.gov, rerickson@usgs.gov",
-    description="Helper tools for Qurto",
+    description="Helper tools for Quarto",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/mnfienen/quarto-utils",
