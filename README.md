@@ -6,7 +6,7 @@ Further utilities allow users to supply a list of `dois`, look up the `BiBTeX` e
 
 Finally, this package allows authors to compose Quarto MarkDown documents (`.qmd` files) using tagged `dois` as references. From these, the code replaces such `dois` with valid `BiBTeX` references which are also downloaded into a `.bib` file.
 
-The jupyter notebook in `/examples/examples.ipynb` includes example applications of all the functions in the package.
+The jupyter notebook in `/qtils/examples/examples.ipynb` includes example applications of all the functions in the package.
 
 # Getting Started
 This code will work with python 3.7 and greater with `requests` and no other special packages needed (save for `jupyter notebook` to run the notebook example and `pytest` to evaluate the tests)
