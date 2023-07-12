@@ -74,12 +74,12 @@ def _strip_doi(doistring):
     Args:
         doistring (_type_): string containing a doi
     """
-    doistring = doistring.strip().replace('\t',' ')
+    doistring = doistring.strip().replace('\t',' ').replace('\n',' ')
     locbrak = locsep = locspace = locbackslash = loccomma = 1e6
-    if ';' in doistring:
-        locsep = doistring.index(';')
-    if ']' in doistring:
-        locbrak = doistring.index(']')
+    if '; ' in doistring:
+        locsep = doistring.index('; ')
+    if '] ' in doistring:
+        locbrak = doistring.index('] ')
     if ' ' in doistring:
         locspace = doistring.index(' ')
     if ',' in doistring:

@@ -31,6 +31,8 @@ This is where it is all summed up nicely.
 This person [\_doi:10.1145/2492517.2500290] pretty much covers it, no?
 There are all kinds of relationships and it makes one wonder about how water fits in and the relation between James Bond and the Cold War?[\_doi:hTTps://doi.org/10.1038/nclimate2425; \_doi:10.1080/14650040590946584, \_doi:10.1029/WR020i004p00415]
 
+How about some goofily formatted ecorefs? [\_doi:https://doi.org/10.1577/1548-8659(2001)130<0809:SVIDOL>2.0.CO;2; \_doi:https://doi.org/10.1890/1051-0761(2006)016[2035:BIRFUP]2.0.CO;2; \_doi:https://doi.org/10.1641/0006-3568(2000)050[0053:EAECON]2.3.CO;2] 
+
 # How does this relate to Halloween Candy?
 
 Welp, of course there is not a relation here, but there is cool data from FiveThirtyEight though in (@fig-candy).

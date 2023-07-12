@@ -30,7 +30,10 @@ def test_doi_parser():
     assert dois == ['10.1145/2492517.2500290',
                     'hTTps://doi.org/10.1038/nclimate2425',
                     '10.1080/14650040590946584',
-                    '10.1029/WR020i004p00415']
+                    '10.1029/WR020i004p00415',
+                    'https://doi.org/10.1577/1548-8659(2001)130<0809:SVIDOL>2.0.CO;2',
+                    'https://doi.org/10.1890/1051-0761(2006)016[2035:BIRFUP]2.0.CO;2',
+                    'https://doi.org/10.1641/0006-3568(2000)050[0053:EAECON]2.3.CO;2']
     
 def test_dois_to_bibtex_qmd():
     from qtils.utils import update_references
