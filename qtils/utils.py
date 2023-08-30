@@ -1,5 +1,5 @@
 import urllib.request
-from urllib.error import HTTPError
+from urllib.error import HTTPError, URLError
 import pathlib as pl 
 
 BASE_URL = 'http://dx.doi.org/'
@@ -24,11 +24,14 @@ def doi2bib(doi='10.1016/j.jhydrol.2014.04.061', skip_url=True):
             bibtex = f.read().decode()
         return [i for i in bibtex.split('\n') if not i.strip().startswith('url')]
     except HTTPError as e:
+        print(e)
         if e.code == 404:
             print('DOI not found.')
         else:
             print('Service unavailable.')
         return f'FAIL'
+    except URLError as e:
+        return e.reason.strerror
 
 def update_bibfile(bib_file, dois):
     """updates an bibliography file with a new list of dois. If the bibliography
@@ -54,6 +57,8 @@ def update_bibfile(bib_file, dois):
             if cbib == 'FAIL':
                 # doi2bib failed - just warn and move on
                 print (f'Could not obtain bibTex entry for doi="{cdoi}"')
+            elif 'failed' in cbib:
+                print(f'Could not obtain bibTex entry for doi="{cdoi}". Error message from urllib:\n{cbib}')
             elif cbib[0].strip() in inbib:
                 # entry already in the bib file
                 print(f'doi: "{cdoi}" already in {bib_file}. Skipping')
@@ -64,7 +69,7 @@ def update_bibfile(bib_file, dois):
     # make a dictionary with the dois and the key for references
     bib_dict = {}
     for cdoi,i in zip(dois,bibs):
-        if i != 'FAIL':
+        if i != 'FAIL' and 'failed' not in i:
             bib_dict[cdoi] = i[0].split('{')[1].strip().replace(',','')
     return bib_dict
                 
