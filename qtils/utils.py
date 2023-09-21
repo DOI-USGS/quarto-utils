@@ -85,6 +85,8 @@ def _strip_doi(doistring):
         locsep = doistring.index('; ')
     if '] ' in doistring:
         locbrak = doistring.index('] ')
+    if '].' in doistring:
+        locbrak = doistring.index('].')
     if ' ' in doistring:
         locspace = doistring.index(' ')
     if ',' in doistring:
