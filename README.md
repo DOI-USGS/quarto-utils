@@ -2,26 +2,27 @@
 
 #### Authors:          Michael N. Fienen, Richard A. Erickson
 #### Point of contact: Michael N. Fienen (mnfienen@usgs.gov)
-#### Repository Type:  Formal _Python_ language package
-#### Year of Origin:   2023 (original publication)
-#### Year of Version:  2023
+#### Repository Type:  Formal Python package
+#### Year of Origin:   2024 (original publication)
+#### Year of Version:  2024
 #### Version:          1.0.0 
-#### Digital Object Identifier (DOI): https://doi.org/10.5066/XXXX
-#### USGS Information Product Data System (IPDS) no.: IP-XXXX (internal agency tracking)
+#### Digital Object Identifier (DOI): https://doi.org/10.5066/P1GZPONT
+#### USGS Information Product Data System (IPDS) no.: IP-158658
 
 ***
 
 _Suggested Citation:_
 
-Fienen MN, Erickson, RA. 2023.
-quarto-utils.
-U.S. Geological Survey software release. Reston, Va.
-https://doi.org/10.5066/xxxxx.
+Fienen MN, Erickson RA. 2024.
+quarto-utils
+U.S. Geological Survey software release. Reston, Va.,
+https://doi.org/10.5066/P1GZPONT.
 
 _Authors' [ORCID](https://orcid.org) nos.:_
 
-- Michael N. Fienen, [0000-0002-7756-4651](https://orcid.org/0000-0002-7756-4651);
-- Richard A. Erickson, [0000-0003-4649-482X](https://orcid.org/0000-0003-4649-482X);
+- Michael N. Fienen, [0000-0002-7756-4651](https://orcid.org/0000-0002-7756-4651)
+- Richard A. Erickson, [0000-0003-4649-482X](https://orcid.org/0000-0003-4649-482X)
+
 
 ***
 ***
@@ -35,14 +36,13 @@ Finally, this package allows authors to compose Quarto MarkDown documents (`.qmd
 The jupyter notebook in `/qtils/examples/examples.ipynb` includes example applications of all the functions in the package.
 
 # Getting Started
-This code will work with python 3.7 and greater with `requests` and no other special packages needed (save for `jupyter notebook` to run the notebook example and `pytest` to evaluate the tests)
 
+This code will work with python 3.7 and greater with `requests` and no other special packages needed (save for `jupyter notebook` to run the notebook example and `pytest` to evaluate the tests)
 
 # Repository Files
 
-This repository contains the code for a Python package.
-This repository contains the standard Python repository files .
-Additionally, it contains:
+This repository contains a Quarto-based template for the _Journal of Fish and Wildlife Management_.
+To support this, the following files are located here:
 
 - `README.md` is this file.
 - `LICENSE.md` is the Official USGS License. 
@@ -50,5 +50,20 @@ Additionally, it contains:
 - `CONTRIBUTING.md` describes how to contribute to this project.
 - `DISCLAIMER.md` is the standard USGS disclaimer.
 - `.gitignore` is a file telling git which files to not track.
+- `ci` a folder for autmoated testing of this repostory and contains a `yml` file.
+- `quarto-utils` a folder with the Python package an examples. This includes an `examples` folder and `test` folder.
+- `setup.py` is a Python file for the package.
 
+# Background knowledge
 
+This template assumes the user knows, or at least wants to learn, how to use Markdown-based text programs such as Quarto.
+Knowing basic Markdown commands will help.
+Additionally, knowing LaTeX will assist in helping with advanced formatting.
+
+# Acknowledgments
+
+We thank the U.S. Geological Survey Biological Threats and Invasive Species Research Program and U.S. Geological Survey Water Mission Area Integrated Information Dissemination Division for funding.
+Any use of trade, firm, or product names is for descriptive purposes only and does not imply endorsement by the U.S. Government.
+The findings and opinions expressed in this manuscript are those of the authors and do not necessarily represent the views of the US Fish and Wildlife Service.
+
+[quarto]: https://quarto.org/
