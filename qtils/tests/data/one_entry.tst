@@ -1,11 +1,2 @@
 @article{Wallis_2014,
-	doi = {10.1016/j.jhydrol.2014.04.061},
-	year = 2014,
-	month = {jul},
-	publisher = {Elsevier {BV}},
-	volume = {515},
-	pages = {191--204},
-	author = {Ilka Wallis and Catherine Moore and Vincent Post and Leif Wolf and Evelien Martens and Henning Prommer},
-	title = {Using predictive uncertainty analysis to optimise tracer test design and data acquisition},
-	journal = {Journal of Hydrology}
-}
+	title={Using predictive uncertainty analysis to optimise tracer test design and data acquisition}, volume={515}, ISSN={0022-1694}, url={http://dx.doi.org/10.1016/j.jhydrol.2014.04.061}, DOI={10.1016/j.jhydrol.2014.04.061}, journal={Journal of Hydrology}, publisher={Elsevier BV}, author={Wallis, Ilka and Moore, Catherine and Post, Vincent and Wolf, Leif and Martens, Evelien and Prommer, Henning}, year={2014}, month=jul, pages={191–204} }
