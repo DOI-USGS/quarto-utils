@@ -22,7 +22,8 @@ def doi2bib(doi='10.1016/j.jhydrol.2014.04.061', skip_url=True):
     try:
         with urllib.request.urlopen(req) as f:
             bibtex = f.read().decode()
-        return [i for i in bibtex.split('\n') if not i.strip().startswith('url')]
+        return bibtex.strip().split(None, 1)
+        # return [i for i in bibtex.split('\n') if not i.strip().startswith('url')]
     except HTTPError as e:
         print(e)
         if e.code == 404:
