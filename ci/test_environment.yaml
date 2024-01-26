@@ -1,4 +1,4 @@
-name: quartoutils
+name: qutilci
 channels:
 - conda-forge
 - defaults
