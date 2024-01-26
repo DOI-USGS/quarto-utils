@@ -22,7 +22,7 @@ def doi2bib(doi='10.1016/j.jhydrol.2014.04.061', skip_url=True):
     req.add_header('Accept', 'application/x-bibtex')
     try:
         with urllib.request.urlopen(req) as f:
-            bibtex = unidecode(f.read())
+            bibtex = unidecode(f.read().decode())
         return bibtex.strip().split(None, 1)
         # return [i for i in bibtex.split('\n') if not i.strip().startswith('url')]
     except HTTPError as e:
