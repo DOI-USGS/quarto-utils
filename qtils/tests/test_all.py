@@ -3,6 +3,7 @@ import pathlib as pl
 import urllib.request
 from urllib.error import HTTPError, URLError
 import shutil
+from unidecode import unidecode
 
 DATA_DIR = pl.Path('qtils/tests/data')
 
@@ -20,7 +21,7 @@ def test_url():
 def test_getbib():
     from qtils.utils import doi2bib
     bib = '\n\t'.join(doi2bib('10.1016/j.jhydrol.2014.04.061'))
-    refbib = ''.join([i for i in open(DATA_DIR / 'one_entry.tst', 'r').readlines()])
+    refbib = unidecode(''.join([i for i in open(DATA_DIR / 'one_entry.tst', 'r').readlines()]))
     assert refbib == bib
 
 def test_update_bib():
