@@ -1,6 +1,8 @@
 import urllib.request
 from urllib.error import HTTPError, URLError
 import pathlib as pl 
+import sys
+sys.setdefaultencoding('utf-8')
 
 BASE_URL = 'http://dx.doi.org/'
 
