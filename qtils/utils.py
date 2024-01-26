@@ -1,6 +1,7 @@
 import urllib.request
 from urllib.error import HTTPError, URLError
 import pathlib as pl 
+from unidecode import unidecode
 
 BASE_URL = 'http://dx.doi.org/'
 
@@ -21,7 +22,7 @@ def doi2bib(doi='10.1016/j.jhydrol.2014.04.061', skip_url=True):
     req.add_header('Accept', 'application/x-bibtex')
     try:
         with urllib.request.urlopen(req) as f:
-            bibtex = f.read().decode()
+            bibtex = unidecode(f.read())
         return bibtex.strip().split(None, 1)
         # return [i for i in bibtex.split('\n') if not i.strip().startswith('url')]
     except HTTPError as e:
