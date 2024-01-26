@@ -82,13 +82,15 @@ def _strip_doi(doistring):
     """
     doistring = doistring.strip().replace("\t",' ').replace("\n",' ')
     locbraks = locbrakp = locsep = locspace = 1e6
-    locbackslash = loccomma = 1e6
+    locbackslash = loccomma = locbrakpars = 1e6
     if "; " in doistring:
         locsep = doistring.index('; ')
     if '] ' in doistring:
         locbraks = doistring.index('] ')
     if '].' in doistring:
         locbrakp = doistring.index('].')
+    if '])' in doistring:
+        locbrakpars =  doistring.index('])')
     if ' ' in doistring:
         locspace = doistring.index(' ')
     if ',' in doistring:
@@ -96,7 +98,7 @@ def _strip_doi(doistring):
     if "\\" in doistring:
         locbackslash = doistring.index('\\')
         
-    doilimit = min((locbraks, locbrakp, locsep, 
+    doilimit = min((locbraks, locbrakp, locsep, locbrakpars,
                     locspace, locbackslash, loccomma))    
     return(doistring[:doilimit])
     
