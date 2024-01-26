@@ -37,7 +37,15 @@ The jupyter notebook in `/qtils/examples/examples.ipynb` includes example applic
 
 # Getting Started
 
-This code will work with python 3.7 and greater with `requests` and no other special packages needed (save for `jupyter notebook` to run the notebook example and `pytest` to evaluate the tests)
+This code will work with python 3.7 and greater with `requests` and no other special packages needed (save for `jupyter notebook` to run the notebook example and `pytest` to evaluate the tests).
+
+To install, download this repo (such as `git clone ...`) and then run `python setup.py install` (or possibly `pytyon3` depending upon your local path configuraitons).
+
+# SSL certificates
+
+Department of Interior users may experince SSL certificate errors due to secruity settings.
+The site https://code.usgs.gov/usgs/best-practices/-/blob/master/ssl/WorkingWithinSSLIntercept.md?ref_type=heads provides some best praticies for working with these secruity settings.
+
 
 # Repository Files
 
@@ -59,6 +67,21 @@ To support this, the following files are located here:
 This template assumes the user knows, or at least wants to learn, how to use Markdown-based text programs such as Quarto.
 Knowing basic Markdown commands will help.
 Additionally, knowing LaTeX will assist in helping with advanced formatting.
+
+# Explination of examples and other tips
+
+The `test.qmd` and `example.dois.qmd` include references that Fienen created to demonstrate the package. 
+The content of the example is not meaningful, but the references are real - just inasmcuh as they can be pulled from the web.
+
+`test.qmd` becomes `test.updated.qmd` after processing and the second file should be renderederd as a Quarto file.
+
+Referneces in a bib files often require manual formatting.
+For example, proper nouns like Mississippi River may needd an extra `{}` to be capitalized, for example `title  = {{Mississippi River:} my story on {Old Man River}}` to keep "Mississippi River" and "Old Man River capitalized.
+The automatic references also often do not have correct capitilzation and these may need to be chagned by the user.
+
+# Run time
+
+This code takes minimal run time (< 1 minute) under most situations.
 
 # Acknowledgments
 
