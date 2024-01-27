@@ -9,4 +9,4 @@ dependencies:
 - flake8
 - codecov
 - coverage
-- unidecode
+- text-unidecode
