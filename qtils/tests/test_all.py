@@ -3,7 +3,7 @@ import pathlib as pl
 import urllib.request
 from urllib.error import HTTPError, URLError
 import shutil
-from text-unidecode import unidecode
+from text_unidecode import unidecode
 
 DATA_DIR = pl.Path('qtils/tests/data')
 
