@@ -37,14 +37,15 @@ The jupyter notebook in `/qtils/examples/examples.ipynb` includes example applic
 
 # Getting Started
 
-This code will work with python 3.7 and greater with `requests` and no other special packages needed (save for `jupyter notebook` to run the notebook example and `pytest` to evaluate the tests).
+This code will work with python 3.10 and greater with `requests` and `text-unidecode` packages (optional additional packages include `jupyter notebook` to run the notebook example and `pytest` to evaluate the tests).
 
-To install, download this repo (such as `git clone ...`) and then run `python setup.py install` (or possibly `pytyon3` depending upon your local path configuraitons).
+To install, download this repo (such as `git clone ...`) and then run `python setup.py install` (or possibly `python3` depending upon your local path configurations).
 
 # SSL certificates
 
-Department of Interior users may experince SSL certificate errors due to secruity settings.
-The site https://code.usgs.gov/usgs/best-practices/-/blob/master/ssl/WorkingWithinSSLIntercept.md?ref_type=heads provides some best praticies for working with these secruity settings.
+Department of Interior users may experience SSL certificate errors due to The site https://code.usgs.gov/usgs/best-practices/-/blob/master/ssl/WorkingWithinSSLIntercept.md?ref_type=heads provides some best practices for working with these security settings.
+ settings.
+The site https://code.usgs.gov/usgs/best-practices/-/blob/master/ssl/WorkingWithinSSLIntercept.md?ref_type=heads provides some best practices for working with these security settings.
 
 
 # Repository Files
@@ -58,7 +59,7 @@ To support this, the following files are located here:
 - `CONTRIBUTING.md` describes how to contribute to this project.
 - `DISCLAIMER.md` is the standard USGS disclaimer.
 - `.gitignore` is a file telling git which files to not track.
-- `ci` a folder for autmoated testing of this repostory and contains a `yml` file.
+- `ci` a folder for automated testing of this repository and contains a `yaml` file.
 - `quarto-utils` a folder with the Python package an examples. This includes an `examples` folder and `test` folder.
 - `setup.py` is a Python file for the package.
 
@@ -68,20 +69,24 @@ This template assumes the user knows, or at least wants to learn, how to use Mar
 Knowing basic Markdown commands will help.
 Additionally, knowing LaTeX will assist in helping with advanced formatting.
 
-# Explination of examples and other tips
+# Explanation of examples and other tips
 
 The `test.qmd` and `example.dois.qmd` include references that Fienen created to demonstrate the package. 
 The content of the example is not meaningful, but the references are real - just inasmcuh as they can be pulled from the web.
 
-`test.qmd` becomes `test.updated.qmd` after processing and the second file should be renderederd as a Quarto file.
+`test.qmd` becomes `test.updated.qmd` after processing and the second file should be rendered as a Quarto file.
 
-Referneces in a bib files often require manual formatting.
-For example, proper nouns like Mississippi River may needd an extra `{}` to be capitalized, for example `title  = {{Mississippi River:} my story on {Old Man River}}` to keep "Mississippi River" and "Old Man River capitalized.
-The automatic references also often do not have correct capitilzation and these may need to be chagned by the user.
+References in a bib files often require manual formatting.
+For example, proper nouns like Mississippi River may need an extra `{}` to be capitalized, for example `title  = {{Mississippi River:} my story on {Old Man River}}` to keep "Mississippi River" and "Old Man River capitalized.
+The automatic references also often do not have correct capitalization and these may need to be changed by the user.
 
 # Run time
 
 This code takes minimal run time (< 1 minute) under most situations.
+
+# Known Issues
+
+In some cases, special characters (such as em-dash or en-dash) in BiBTeX will be encoded as short character strings when written to the bib file. These characters will be seen on render or may crash quarto rendering. Users are advised to inspect references after they are downloaded.
 
 # Acknowledgments
 
