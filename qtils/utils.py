@@ -1,7 +1,7 @@
 import urllib.request
 from urllib.error import HTTPError, URLError
 import pathlib as pl 
-from unidecode import unidecode
+from text_unidecode import unidecode
 
 BASE_URL = 'http://dx.doi.org/'
 
