@@ -50,7 +50,7 @@
     "organization": "U.S. Geological Survey",
     "description": "utilities for references in quarto",
     "version": "1.0",
-    "status": "production",
+    "status": "Production",
 
     "permissions": {
       "usageType": "openSource",
