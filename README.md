@@ -1,5 +1,9 @@
 # quarto-utils
 
+**Package note:** A static copy of this project exists on code.usgs.gov as the official release.
+The dynamic, living version of this project exists on GitHub at https://github.com/DOI-USGS/quarto-utils.
+The code.usgs.gov page will be updated with major releases with active development occuring on the GitHub repo.
+
 #### Authors:          Michael N. Fienen, Richard A. Erickson
 #### Point of contact: Michael N. Fienen (mnfienen@usgs.gov)
 #### Repository Type:  Formal Python package
