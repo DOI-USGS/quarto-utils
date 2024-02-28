@@ -62,10 +62,11 @@
       ]
     },
 
-    "homepageURL": "https://github.com/DOI-USGS/quarto-utils",
-    "downloadURL": "https://github.com/DOI-USGS/quarto-utils/archive/refs/heads/v1.0.zip",
-    "disclaimerURL": "https://raw.githubusercontent.com/DOI-USGS/quarto-utils/v1.0/DISCLAIMER.md",
-    "repositoryURL": "https://github.com/DOI-USGS/quarto-utils.git",
+    "homepageURL": "https://code.usgs.gov/umesc/quant-ecology/quarto-utils",
+    "downloadURL": "https://code.usgs.gov/umesc/quant-ecology/quarto-utils/-/archive/v1.0/quarto-utils-v1.0.zip",
+    "disclaimerURL": "https://code.usgs.gov/umesc/quant-ecology/quarto-utils/-/raw/v1.0/DISCLAIMER.md",
+    "repositoryURL": "https://code.usgs.gov/umesc/quant-ecology/quarto-utils.git",
+
 
     "laborHours": 34.75,
 
