@@ -1,0 +1,60 @@
+name: Tests
+
+on:
+  schedule:
+    - cron: '0 9 * * 1' # run every Monday at 9 AM UTC (3 am PST)
+  push:
+  pull_request:
+
+jobs:
+  build:
+    name: ${{ matrix.python-version }}, ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ ubuntu-latest, macos-latest, windows-latest ]
+        python-version: ['3.10', '3.11'] 
+        #exclude:
+          # tests with ubuntu-latest, python latest
+          # are executed by build_docs.yaml
+        #  - os: ubuntu-latest
+        #    python-version: 3.9
+      
+    steps:
+    - name: Checkout source
+      uses: actions/checkout@v3
+      with:
+        persist-credentials: false
+
+    # Setup conda env
+    - name: Install Conda environment using micromamba
+      uses: mamba-org/setup-micromamba@v1
+      with:
+        environment-file: ci/test_environment.yaml
+        environment-name: qutilci
+        create-args: >-
+          python=${{ matrix.python-version }}
+        cache-downloads: true
+        cache-environment: true
+
+
+    - name: Mamba info
+      shell: bash -l {0}
+      run: micromamba info
+
+
+    - name: Mamba list
+      shell: bash -l {0}
+      run: micromamba list
+    #- name: Lint with flake8
+    #  run: |
+    #    # stop the build if there are Python syntax errors or undefined names
+    #    flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+    #    # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+    #    flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+    - name: Run tests 
+      shell: bash -l {0}
+      run: |
+        coverage run -m pytest -v --durations=20
+        coverage report -m
+      

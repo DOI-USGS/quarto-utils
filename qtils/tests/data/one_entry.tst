@@ -1,11 +1,2 @@
-@article{Wallis_2014,
-	doi = {10.1016/j.jhydrol.2014.04.061},
-	year = 2014,
-	month = {jul},
-	publisher = {Elsevier {BV}},
-	volume = {515},
-	pages = {191--204},
-	author = {Ilka Wallis and Catherine Moore and Vincent Post and Leif Wolf and Evelien Martens and Henning Prommer},
-	title = {Using predictive uncertainty analysis to optimise tracer test design and data acquisition},
-	journal = {Journal of Hydrology}
-}
+@article{Famiglietti_2014,
+	title={The global groundwater crisis}, volume={4}, ISSN={1758-6798}, url={http://dx.doi.org/10.1038/nclimate2425}, DOI={10.1038/nclimate2425}, number={11}, journal={Nature Climate Change}, publisher={Springer Science and Business Media LLC}, author={Famiglietti, J. S.}, year={2014}, month=oct, pages={945-948} }

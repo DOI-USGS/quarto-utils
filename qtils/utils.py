@@ -1,6 +1,7 @@
 import urllib.request
 from urllib.error import HTTPError, URLError
 import pathlib as pl 
+from text_unidecode import unidecode
 
 BASE_URL = 'http://dx.doi.org/'
 
@@ -21,8 +22,9 @@ def doi2bib(doi='10.1016/j.jhydrol.2014.04.061', skip_url=True):
     req.add_header('Accept', 'application/x-bibtex')
     try:
         with urllib.request.urlopen(req) as f:
-            bibtex = f.read().decode()
-        return [i for i in bibtex.split('\n') if not i.strip().startswith('url')]
+            bibtex = unidecode(f.read().decode())
+        return bibtex.strip().split(None, 1)
+        # return [i for i in bibtex.split('\n') if not i.strip().startswith('url')]
     except HTTPError as e:
         print(e)
         if e.code == 404:
@@ -81,13 +83,15 @@ def _strip_doi(doistring):
     """
     doistring = doistring.strip().replace("\t",' ').replace("\n",' ')
     locbraks = locbrakp = locsep = locspace = 1e6
-    locbackslash = loccomma = 1e6
+    locbackslash = loccomma = locbrakpars = 1e6
     if "; " in doistring:
         locsep = doistring.index('; ')
     if '] ' in doistring:
         locbraks = doistring.index('] ')
     if '].' in doistring:
         locbrakp = doistring.index('].')
+    if '])' in doistring:
+        locbrakpars =  doistring.index('])')
     if ' ' in doistring:
         locspace = doistring.index(' ')
     if ',' in doistring:
@@ -95,7 +99,7 @@ def _strip_doi(doistring):
     if "\\" in doistring:
         locbackslash = doistring.index('\\')
         
-    doilimit = min((locbraks, locbrakp, locsep, 
+    doilimit = min((locbraks, locbrakp, locsep, locbrakpars,
                     locspace, locbackslash, loccomma))    
     return(doistring[:doilimit])
     

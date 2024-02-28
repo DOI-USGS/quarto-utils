@@ -1,13 +1,27 @@
 import pytest
 import pathlib as pl
+import urllib.request
+from urllib.error import HTTPError, URLError
 import shutil
+from text_unidecode import unidecode
 
 DATA_DIR = pl.Path('qtils/tests/data')
 
+def test_url():
+    doi = 'hTTps://doi.org/10.1038/nclimate2425'
+    BASE_URL = 'https://dx.doi.org/'
+    url = BASE_URL + doi.lower().replace('https://doi.org','').replace(' ','')
+    req = urllib.request.Request(url,
+            headers={'Accept': 'text/bibliography; style=bibtex'} )
+    
+    with urllib.request.urlopen(req) as f:
+            bibtex = f.read().decode()
+ 
+
 def test_getbib():
     from qtils.utils import doi2bib
-    bib = ' '.join(doi2bib('10.1016/j.jhydrol.2014.04.061'))
-    refbib = ' '.join([i.rstrip() for i in open(DATA_DIR / 'one_entry.tst', 'r').readlines()])
+    bib = '\n\t'.join(doi2bib('hTTps://doi.org/10.1038/nclimate2425'))
+    refbib = unidecode(''.join([i for i in open(DATA_DIR / 'one_entry.tst', 'r').readlines()]))
     assert refbib == bib
 
 def test_update_bib():
