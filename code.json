@@ -49,7 +49,7 @@
     "name": "quarto-utils",
     "organization": "U.S. Geological Survey",
     "description": "utilities for references in quarto",
-    "version": "1.0",
+    "version": "v1.0",
     "status": "production",
 
     "permissions": {
