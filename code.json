@@ -17,7 +17,7 @@
     },
 
     "homepageURL": "https://code.usgs.gov/umesc/quant-ecology/quarto-utils",
-    "downloadURL": "https://code.usgs.gov/umesc/quant-ecology/quarto-utils/-/archive/main/quarto-utils.zip",
+    "downloadURL": "https://code.usgs.gov/umesc/quant-ecology/quarto-utils.git",
     "disclaimerURL": "https://code.usgs.gov/umesc/quant-ecology/quarto-utils/-/raw/main/DISCLAIMER.md",
     "repositoryURL": "https://code.usgs.gov/umesc/quant-ecology/quarto-utils/quarto-utils.git",
     "vcs": "git",
@@ -63,7 +63,7 @@
     },
 
     "homepageURL": "https://code.usgs.gov/umesc/quant-ecology/quarto-utils",
-    "downloadURL": "https://code.usgs.gov/umesc/quant-ecology/quarto-utils/archive/-/v1.0/quarto-utils.zip",
+    "downloadURL": "https://code.usgs.gov/umesc/quant-ecology/quarto-utils.git",
     "disclaimerURL": "https://code.usgs.gov/umesc/quant-ecology/quarto-utils/-/raw/v1.0/DISCLAIMER.md",
     "repositoryURL": "https://code.usgs.gov/umesc/quant-ecology/quarto-utils/quarto-utils.git",
     "vcs": "git",
