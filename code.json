@@ -11,15 +11,15 @@
       "licenses": [
         {
           "name": "Public Domain, CC0-1.0",
-          "URL": "https://github.com/DOI-USGS/quarto-utils/-/raw/main/LICENSE.md"
+          "URL": "https://code.usgs.gov/umesc/quant-ecology/quarto-utils/-/raw/main/LICENSE.md"
         }
       ]
     },
 
-    "homepageURL": "https://github.com/DOI-USGS/quarto-utils",
-    "downloadURL": "https://github.com/DOI-USGS/quarto-utils/-/archive/main/quarto-utils.zip",
-    "disclaimerURL": "https://github.com/DOI-USGS/quarto-utils/-/raw/main/DISCLAIMER.md",
-    "repositoryURL": "https://github.com/DOI-USGS/quarto-utils.git",
+    "homepageURL": "https://code.usgs.gov/umesc/quant-ecology/quarto-utils",
+    "downloadURL": "https://code.usgs.gov/umesc/quant-ecology/quarto-utils/-/archive/main/quarto-utils.zip",
+    "disclaimerURL": "https://code.usgs.gov/umesc/quant-ecology/quarto-utils/-/raw/main/DISCLAIMER.md",
+    "repositoryURL": "https://code.usgs.gov/umesc/quant-ecology/quarto-utils/quarto-utils.git",
     "vcs": "git",
 
     "laborHours": 33.5,
@@ -57,15 +57,15 @@
       "licenses": [
         {
           "name": "Public Domain, CC0-1.0",
-          "URL": "https://github.com/DOI-USGS/quarto-utils/-/raw/v1.0/LICENSE.md"
+          "URL": "https://code.usgs.gov/umesc/quant-ecology/quarto-utils/-/raw/v1.0/LICENSE.md"
         }
       ]
     },
 
-    "homepageURL": "https://github.com/DOI-USGS/quarto-utils",
-    "downloadURL": "https://github.com/DOI-USGS/quarto-utils/archive/-/v1.0/quarto-utils.zip",
-    "disclaimerURL": "https://github.com/DOI-USGS/quarto-utils/-/raw/v1.0/DISCLAIMER.md",
-    "repositoryURL": "https://github.com/DOI-USGS/quarto-utils.git",
+    "homepageURL": "https://code.usgs.gov/umesc/quant-ecology/quarto-utils",
+    "downloadURL": "https://code.usgs.gov/umesc/quant-ecology/quarto-utils/archive/-/v1.0/quarto-utils.zip",
+    "disclaimerURL": "https://code.usgs.gov/umesc/quant-ecology/quarto-utils/-/raw/v1.0/DISCLAIMER.md",
+    "repositoryURL": "https://code.usgs.gov/umesc/quant-ecology/quarto-utils/quarto-utils.git",
     "vcs": "git",
 
     "laborHours": 34.75,
@@ -91,3 +91,4 @@
     }
   }
 ]
+
