@@ -47,7 +47,6 @@ Department of Interior users may experience SSL certificate errors due to The si
  settings.
 The site https://code.usgs.gov/usgs/best-practices/-/blob/master/ssl/WorkingWithinSSLIntercept.md?ref_type=heads provides some best practices for working with these security settings.
 
-
 # Repository Files
 
 This repository contains a Quarto-based template for the _Journal of Fish and Wildlife Management_.
