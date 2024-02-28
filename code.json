@@ -11,15 +11,15 @@
       "licenses": [
         {
           "name": "Public Domain, CC0-1.0",
-          "URL": "https://code.usgs.gov/umesc/quant-ecology/quarto-utils/-/raw/main/LICENSE.md"
+          "URL": "https://raw.githubusercontent.com/DOI-USGS/quarto-utils/main/LICENSE.md"
         }
       ]
     },
 
-    "homepageURL": "https://code.usgs.gov/umesc/quant-ecology/quarto-utils",
-    "downloadURL": "https://code.usgs.gov/umesc/quant-ecology/quarto-utils/-/archive/main/quarto-utils-main.zip",
-    "disclaimerURL": "https://code.usgs.gov/umesc/quant-ecology/quarto-utils/-/raw/main/DISCLAIMER.md",
-    "repositoryURL": "https://code.usgs.gov/umesc/quant-ecology/quarto-utils.git",
+    "homepageURL": "https://github.com/DOI-USGS/quarto-utils",
+    "downloadURL": "https://github.com/DOI-USGS/quarto-utils/archive/refs/heads/main.zip",
+    "disclaimerURL": "https://raw.githubusercontent.com/DOI-USGS/quarto-utils/main/DISCLAIMER.md",
+    "repositoryURL": "https://github.com/DOI-USGS/quarto-utils.git",
     "vcs": "git",
 
     "laborHours": 33.5,
@@ -57,16 +57,15 @@
       "licenses": [
         {
           "name": "Public Domain, CC0-1.0",
-          "URL": "https://code.usgs.gov/umesc/quant-ecology/quarto-utils/-/raw/v1.0/LICENSE.md"
+          "URL": "https://raw.githubusercontent.com/DOI-USGS/quarto-utils/v1.0/LICENSE.md"
         }
       ]
     },
 
-    "homepageURL": "https://code.usgs.gov/umesc/quant-ecology/quarto-utils",
-    "downloadURL": "https://code.usgs.gov/umesc/quant-ecology/quarto-utils/-/archive/v1.0/quarto-utils-v1.0.zip",
-    "disclaimerURL": "https://code.usgs.gov/umesc/quant-ecology/quarto-utils/-/raw/v1.0/DISCLAIMER.md",
-    "repositoryURL": "https://code.usgs.gov/umesc/quant-ecology/quarto-utils.git",
-    "vcs": "git",
+    "homepageURL": "https://github.com/DOI-USGS/quarto-utils",
+    "downloadURL": "https://github.com/DOI-USGS/quarto-utils/archive/refs/heads/v1.0.zip",
+    "disclaimerURL": "https://raw.githubusercontent.com/DOI-USGS/quarto-utils/v1.0/DISCLAIMER.md",
+    "repositoryURL": "https://github.com/DOI-USGS/quarto-utils.git",
 
     "laborHours": 34.75,
 
