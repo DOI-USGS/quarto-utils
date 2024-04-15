@@ -90,7 +90,8 @@ This code takes minimal run time (< 1 minute) under most situations.
 
 # Known Issues
 
-In some cases, special characters (such as em-dash or en-dash) in BiBTeX will be encoded as short character strings when written to the bib file. These characters will be seen on render or may crash quarto rendering. Users are advised to inspect references after they are downloaded.
+- In some cases, special characters (such as em-dash or en-dash) in BiBTeX will be encoded as short character strings when written to the bib file. These characters will be seen on render or may crash quarto rendering. Users are advised to inspect references after they are downloaded.
+- Some DOIs contain the underscore character (`_`) and this cause this package to not find any new DOIs or otherwise fail. If this occurs, use `\_doi` rather than `_doi` to tag your DOIs in the Quarto file.
 
 # Acknowledgments
 
