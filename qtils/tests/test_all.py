@@ -2,7 +2,7 @@ import pytest
 import pathlib as pl
 import urllib.request
 from urllib.error import HTTPError, URLError
-import shutil
+import shutil, os
 from text_unidecode import unidecode
 
 DATA_DIR = pl.Path('qtils/tests/data')
@@ -28,9 +28,9 @@ def test_update_bib():
     from qtils.utils import update_bibfile
     # make a copy to test with 
     shutil.copy2(DATA_DIR / 'ref.bib_backup', 
-                 DATA_DIR / 'ref.bib')
+                DATA_DIR / 'ref.bib')
     # set up dois to update with
-    dois = ['junkus fail','10.1111/gwat.12536','10.1111/gwat.13083', '10.3133/tm7C9']
+    dois = ['junkus fail','10.1111/gwat.12536','10.1111/gwat.13083', '10.3133/tm7C9', '10.1007/978-3-030-45367-1_2']
     
     # run the update - one should fail
     update_bibfile(DATA_DIR / 'ref.bib', dois)
@@ -50,30 +50,42 @@ def test_doi_parser():
                     'https://doi.org/10.1641/0006-3568(2000)050[0053:EAECON]2.3.CO;2',
                     'https://doi.org/10.2193/0022-541X(2006)70[255:EAAIHE]2.0.CO;2']
     
-def test_dois_to_bibtex_qmd():
+def test_underscore_warning():
     from qtils.utils import update_references
+    if (DATA_DIR / 'underscore.bib').exists():
+        os.remove(DATA_DIR / 'underscore.bib')
+    update_references(DATA_DIR / 'underscore_test.qmd',
+                DATA_DIR / 'underscore.bib',
+                False,
+                DATA_DIR / 'underscoreout.qmd')
+    
+    
+def test_dois_to_bibtex_qmd():
+    
     # make a copy to test with 
     shutil.copy2(DATA_DIR / 'ref.bib_backup', 
-                 DATA_DIR / 'references.bib')
+                DATA_DIR / 'references.bib')
+    
     # try with automatic update of filename
     update_references(DATA_DIR / 'example.dois.qmd',
-                      DATA_DIR / 'references.bib',
-                      False,
-                      None)
+                    DATA_DIR / 'references.bib',
+                    False,
+                    None)
+    
     # now try inplace
     shutil.copy2(DATA_DIR / 'ref.bib_backup', 
-                 DATA_DIR / 'references.bib')
+                DATA_DIR / 'references.bib')
     shutil.copy2(DATA_DIR / 'example.dois.qmd', 
-                 DATA_DIR / 'inplace.qmd')
+                DATA_DIR / 'inplace.qmd')
     update_references(DATA_DIR / 'inplace.qmd',
-                      DATA_DIR / 'references.bib',
-                      True,
-                      None)
+                DATA_DIR / 'references.bib',
+                True,
+                None)
+    
     # and, finally try writing to custom filename
     update_references(DATA_DIR / 'inplace.qmd',
-                      DATA_DIR / 'references.bib',
-                      False,
-                      DATA_DIR / 'newfile.qmd')
-    
+                DATA_DIR / 'references.bib',
+                False,
+                DATA_DIR / 'newfile.qmd')
     
     

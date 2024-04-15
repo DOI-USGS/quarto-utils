@@ -44,7 +44,7 @@ def update_bibfile(bib_file, dois):
         dois (list): List of dois (strings) to add to bib_file
     Returns:
         bib_dict (dict): Dictionary with keys of value dois and values of entry
-                         records in the resulting bib file
+                        records in the resulting bib file
     """
     # read in the existing bib file for updating
     bib_file = pl.Path(bib_file)
@@ -82,10 +82,14 @@ def _strip_doi(doistring):
         doistring (_type_): string containing a doi
     """
     doistring = doistring.strip().replace("\t",' ').replace("\n",' ')
-    locbraks = locbrakp = locsep = locspace = 1e6
-    locbackslash = loccomma = locbrakpars = 1e6
+    locbraks = locbrakp = locsep = locsepend = locspace = 1e6
+    locbackslash = loccomma = locbrakpars = locbracketend= 1e6
     if "; " in doistring:
         locsep = doistring.index('; ')
+    if doistring.endswith(';'):
+        locsepend = doistring.index(';')
+    if doistring.endswith(']'):
+        locbracketend = doistring.index(']')
     if '] ' in doistring:
         locbraks = doistring.index('] ')
     if '].' in doistring:
@@ -99,8 +103,8 @@ def _strip_doi(doistring):
     if "\\" in doistring:
         locbackslash = doistring.index('\\')
         
-    doilimit = min((locbraks, locbrakp, locsep, locbrakpars,
-                    locspace, locbackslash, loccomma))    
+    doilimit = min((locbraks, locbrakp, locsep, locsepend, locbrakpars,
+                    locspace, locbackslash, loccomma, locbracketend))    
     return(doistring[:doilimit])
     
 def _write_updated_qmd(qmd_file, qmd_text, inplace=False, new_qmd_file=None):
@@ -115,7 +119,7 @@ def _write_updated_qmd(qmd_file, qmd_text, inplace=False, new_qmd_file=None):
             ofp.write(qmd_text)        
 
 def update_references(qmd_file, bibfile,
-                      inplace=False, new_qmd_file=None):
+                inplace=False, new_qmd_file=None):
     """Updates an entire qmd file, replacing doi callouts (which must
     be listed as `_doi:<actual_doi_here>` in the text) with references
     to the updated bibliography file.
@@ -152,4 +156,4 @@ def update_references(qmd_file, bibfile,
 
     # finally write out the updated file
     _write_updated_qmd(qmd_file, qmd_text, 
-                       inplace=inplace, new_qmd_file=new_qmd_file)
+                inplace=inplace, new_qmd_file=new_qmd_file)

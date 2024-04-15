@@ -1,0 +1,33 @@
+---
+title: "On the nature of sentimental RomCom Political Thrillers"
+author: "Grumpy McNegative^[THE Institute of Unreasonable Criticism, NY, NY]"
+format:
+    pdf: 
+      documentclass: article
+      number-sections: True
+      geometry:
+      - left=4cm
+      - right=4cm
+      - top=4cm
+      - bottom=4cm
+    docx: 
+      fig-cap-location: bottom
+      keep-tex: true
+      number-sections: true
+      reference-doc: templates/word-styles-reference-01.docx
+csl: templates/groundwater.csl 
+bibliography: references.bib
+editor: 
+  markdown: 
+    wrap: sentence
+---
+
+# Abstract
+
+This is where it is all summed up nicely.
+
+# On Bromances in Cold War RomComs
+
+This person [_doi:10.1145/2492517.2500290] pretty much covers it, no?
+There are all kinds of relationships and it makes one wonder about how water fits in and the relation between James Bond and the Cold War?[_doi:hTTps://doi.org/10.1038/nclimate2425; _doi:10.1007/978-3-030-45367-1_2, _doi:10.1029/WR020i004p00415]
+
