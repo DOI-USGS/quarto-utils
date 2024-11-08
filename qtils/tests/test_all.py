@@ -65,7 +65,7 @@ def test_underscore_warning():
     
     
 def test_dois_to_bibtex_qmd():
-    
+    from qtils.utils import update_references
     # make a copy to test with 
     shutil.copy2(DATA_DIR / 'ref.bib_backup', 
                 DATA_DIR / 'references.bib')
