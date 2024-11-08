@@ -30,7 +30,11 @@ def test_update_bib():
     shutil.copy2(DATA_DIR / 'ref.bib_backup', 
                 DATA_DIR / 'ref.bib')
     # set up dois to update with
-    dois = ['junkus fail','10.1111/gwat.12536','10.1111/gwat.13083', '10.3133/tm7C9', '10.1007/978-3-030-45367-1_2']
+    dois = ['junkus fail','10.1111/gwat.12536',
+            '10.1111/gwat.13083', 
+            '10.3133/tm7C9',
+            '10.1007/978-3-030-45367-1_2',
+            'https://doi.org/10.1080/02626660009492371']
     
     # run the update - one should fail
     update_bibfile(DATA_DIR / 'ref.bib', dois)
