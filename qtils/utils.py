@@ -50,7 +50,7 @@ def update_bibfile(bib_file, dois):
     bib_file = pl.Path(bib_file)
     if not bib_file.exists():
         bib_file.touch(exist_ok = False)
-    inbib = ' '.join(open(bib_file, 'r').readlines())
+    inbib = ' '.join(open(bib_file, 'r', encoding='utf-8').readlines())
     
     # get the bibtex entries
     with open(bib_file, 'a') as ofp:
@@ -139,7 +139,7 @@ def update_references(qmd_file, bibfile,
     if new_qmd_file is not None:
         new_qmd_file = pl.Path(new_qmd_file)
     # first find the dois
-    qmd_text = qmd_file.read_text()
+    qmd_text = qmd_file.read_text(encoding='utf-8')
     if '\_doi' in qmd_text:
         doiflag = '\_doi'
     else:
