@@ -76,7 +76,7 @@ def test_dois_to_bibtex_qmd():
                     False,
                     None)
     
-    # now try inplace
+    # now try inplace test
     shutil.copy2(DATA_DIR / 'ref.bib_backup', 
                 DATA_DIR / 'references.bib')
     shutil.copy2(DATA_DIR / 'example.dois.qmd', 
