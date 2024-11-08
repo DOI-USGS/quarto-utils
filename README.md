@@ -48,9 +48,6 @@ To install, download this repo (such as `git clone ...`) and then run `python se
 # SSL certificates
 
 Department of Interior users may experience SSL certificate errors due to The site https://code.usgs.gov/usgs/best-practices/-/blob/master/ssl/WorkingWithinSSLIntercept.md?ref_type=heads provides some best practices for working with these security settings.
- settings.
-The site https://code.usgs.gov/usgs/best-practices/-/blob/master/ssl/WorkingWithinSSLIntercept.md?ref_type=heads provides some best practices for working with these security settings.
-
 
 # Repository Files
 
