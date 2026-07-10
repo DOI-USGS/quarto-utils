@@ -1,0 +1,65 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "versioneer[toml]"]
+build-backend = "setuptools.build_meta"
+
+
+
+[project]
+name = "quarto-utils"
+description = "Utilities to update references in Quarto using DOIs"
+version = "1.0.0"
+authors = [
+  {name = "Michael Fienen", email = "mnfienen@usgs.gov"},
+  {name = "Richard Erickson", email = "rerickson@usgs.gov"},
+]
+maintainers = [
+  {name = "Michael Fienen", email = "mnfienen@usgs.gov"}
+]
+readme = "Readme.md"
+keywords = ["quarto", "references","doi"]
+license-files = [
+    "LICENSE.md"
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3 :: Only",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "requests",
+   "jupyter",
+   "notebook",
+   "ipykernel",
+   "text-unidecode",
+   "pytest"
+]
+
+[tool.setuptools.packages.find]
+include = ["qtils","qtils*"]
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "pytest-timeout"
+]
+# docs = [
+# "sphinx",
+# "ruff",
+# "black",
+# "numpydoc",
+# "nbsphinx ", 
+# "sphinx-copybutton",
+# "sphinx_rtd_theme"
+# ]
+# [tool.versioneer]
+# VCS = "git"
+# style = "pep440"
+# versionfile_source = "pycap/_version.py"
+# versionfile_build = "pycap/_version.py"
+# tag_prefix = ""
+# parentdir_prefix = "pycap-"
+
+[project.urls]
+documentation = "https://github.com/DOI-USGS/quarto-utils"
+repository = "https://github.com/DOI-USGS/quarto-utils"
